@@ -1,0 +1,1808 @@
+<xml>
+  <character x="281" y="355" name="bar1" costumes="costume1:bar.png" angle="0" rotation_style="left_right"></character>
+  <character x="281" y="312" name="図1" costumes="costume1:図1.png" angle="0"></character>
+  <character x="281" y="268" name="図2" costumes="costume1:図２.png" angle="0"></character>
+  <character x="281" y="224" name="図3" costumes="costume1:図3.png" angle="0"></character>
+  <character x="281" y="180" name="図4" costumes="costume1:図4.png" angle="0"></character>
+  <character x="281" y="136" name="図5" costumes="costume1:図5.png" angle="0"></character>
+  <character x="281" y="113" name="図6" costumes="costume1:図6_2.png" angle="0"></character>
+  <character x="279" y="109" name="図7" costumes="costume1:図7.png" angle="0"></character>
+  <character x="279" y="355" name="図8" costumes="costume1:図8.png" angle="0"></character>
+  <character x="195" y="360" name="道" costumes="costume1:道2.png" angle="0"></character>
+  <character x="266" y="24" name="うまい棒" costumes="costume1:うまい棒上完成.png" angle="0"></character>
+  <character x="0" y="0" name="うまい棒ゲット" costumes="costume1:うまい棒ゲット.png" angle="0"></character>
+  <character x="115" y="232" name="王冠1" costumes="costume1:王冠.png" angle="0"></character>
+  <character x="0" y="0" name="display1" costumes="costume1:display.png" angle="0"></character>
+  <character x="217" y="369" name="スタート1" costumes="costume1:スタート.png" angle="0"></character>
+  <character x="72" y="132" name="残念賞1" costumes="costume1:残念賞.png" angle="0"></character>
+  <character x="0" y="0" name="ゴリアテ1" costumes="costume1:ゴリアテ.png" angle="0"></character>
+  <block type="variables_set" id="5791" inline="true" x="118" y="-2617">
+    <field name="VAR">うまい棒ゲットライン</field>
+    <value name="VALUE">
+      <block type="math_number" id="5792">
+        <field name="NUM">80</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="5793" inline="true">
+        <field name="VAR">loop</field>
+        <value name="VALUE">
+          <block type="text" id="5794">
+            <field name="TEXT">ture</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="5795" inline="true">
+            <field name="VAR">得点</field>
+            <value name="VALUE">
+              <block type="math_number" id="5796">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="5797" inline="true">
+                <field name="VAR">得点α</field>
+                <value name="VALUE">
+                  <block type="math_number" id="5798">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="5799" inline="true">
+                    <field name="VAR">画面切り替え</field>
+                    <value name="VALUE">
+                      <block type="text" id="5800">
+                        <field name="TEXT">false</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="5801" inline="true">
+                        <field name="VAR">最低平均</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="5802">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="5803" inline="true">
+                            <field name="VAR">最高平均</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="5804">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="5805" inline="true">
+                                <field name="VAR">カウント</field>
+                                <value name="VALUE">
+                                  <block type="math_number" id="5806">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="5807" inline="true">
+                                    <field name="VAR">センサ</field>
+                                    <value name="VALUE">
+                                      <block type="math_number" id="5808">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="5809" inline="true">
+                                        <field name="VAR">タイム</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="5810">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set" id="5811" inline="true">
+                                            <field name="VAR">ランチャー</field>
+                                            <value name="VALUE">
+                                              <block type="math_number" id="5812">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="character_new" id="5813">
+                                                <field name="NAME">display1</field>
+                                                <statement name="DO">
+                                                  <block type="events_on_start" id="5814"></block>
+                                                </statement>
+                                                <next>
+                                                  <block type="character_new" id="5815">
+                                                    <field name="NAME">うまい棒</field>
+                                                    <statement name="DO">
+                                                      <block type="events_on_start" id="5816">
+                                                        <statement name="DO">
+                                                          <block type="variables_set" id="5817" inline="true">
+                                                            <field name="VAR">最大</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_number" id="5818">
+                                                                <field name="NUM">0</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="control_loop" id="5819" disabled="true">
+                                                                <statement name="DO">
+                                                                  <block type="events_on_key_push_or_down" id="5820">
+                                                                    <field name="KEY">K_A</field>
+                                                                    <field name="POD">down</field>
+                                                                    <statement name="DO">
+                                                                      <block type="control_if" id="5821" inline="true">
+                                                                        <value name="COND">
+                                                                          <block type="operators_compare_lt" id="5822" inline="true">
+                                                                            <value name="A">
+                                                                              <block type="variables_get" id="5823">
+                                                                                <field name="VAR">最大</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="operators_minus" id="5824" inline="true">
+                                                                                <value name="A">
+                                                                                  <block type="variables_get" id="5825">
+                                                                                    <field name="VAR">最低平均</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="variables_get" id="5826">
+                                                                                    <field name="VAR">センサ</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <statement name="THEN">
+                                                                          <block type="variables_set" id="5827" inline="true">
+                                                                            <field name="VAR">最大</field>
+                                                                            <value name="VALUE">
+                                                                              <block type="operators_minus" id="5828" inline="true">
+                                                                                <value name="A">
+                                                                                  <block type="variables_get" id="5829">
+                                                                                    <field name="VAR">最低平均</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="variables_get" id="5830">
+                                                                                    <field name="VAR">センサ</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </statement>
+                                                                        <next>
+                                                                          <block type="looks_say" id="5831" inline="true">
+                                                                            <value name="TEXT">
+                                                                              <block type="variables_get" id="5832">
+                                                                                <field name="VAR">最大</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </statement>
+                                                                  </block>
+                                                                </statement>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="character_new" id="5833">
+                                                        <field name="NAME">図7</field>
+                                                        <statement name="DO">
+                                                          <block type="events_on_start" id="5834">
+                                                            <statement name="DO">
+                                                              <block type="control_sleep" id="5835" inline="true">
+                                                                <value name="SEC">
+                                                                  <block type="math_number" id="5836">
+                                                                    <field name="NUM">3</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="control_times" id="5837" inline="true">
+                                                                    <value name="COUNT">
+                                                                      <block type="math_number" id="5838">
+                                                                        <field name="NUM">5</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <statement name="DO">
+                                                                      <block type="variables_set" id="5839" inline="true">
+                                                                        <field name="VAR">最低平均</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="operators_add" id="5840" inline="true">
+                                                                            <value name="A">
+                                                                              <block type="variables_get" id="5841">
+                                                                                <field name="VAR">センサ</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="hardware_sensor_value" id="5842">
+                                                                                <field name="PIN">A0</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </statement>
+                                                                    <next>
+                                                                      <block type="variables_set" id="5843" inline="true">
+                                                                        <field name="VAR">最低平均</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="operators_divide" id="5844" inline="true">
+                                                                            <value name="A">
+                                                                              <block type="variables_get" id="5845">
+                                                                                <field name="VAR">センサ</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="math_number" id="5846">
+                                                                                <field name="NUM">5</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="control_loop" id="5847">
+                                                                            <statement name="DO">
+                                                                              <block type="looks_say" id="5848" inline="true">
+                                                                                <value name="TEXT">
+                                                                                  <block type="variables_get" id="5849">
+                                                                                    <field name="VAR">タイム</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="variables_set" id="5850" inline="true">
+                                                                                    <field name="VAR">センサ</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="math_number" id="5851">
+                                                                                        <field name="NUM">0</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="control_times" id="5852" inline="true">
+                                                                                        <value name="COUNT">
+                                                                                          <block type="math_number" id="5853">
+                                                                                            <field name="NUM">5</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="DO">
+                                                                                          <block type="variables_set" id="5854" inline="true">
+                                                                                            <field name="VAR">センサ</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="operators_add" id="5855" inline="true">
+                                                                                                <value name="A">
+                                                                                                  <block type="variables_get" id="5856">
+                                                                                                    <field name="VAR">センサ</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                  <block type="hardware_sensor_value" id="5857">
+                                                                                                    <field name="PIN">A0</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <next>
+                                                                                          <block type="variables_set" id="5858" inline="true">
+                                                                                            <field name="VAR">センサ</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="operators_divide" id="5859" inline="true">
+                                                                                                <value name="A">
+                                                                                                  <block type="variables_get" id="5860">
+                                                                                                    <field name="VAR">センサ</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                  <block type="math_number" id="5861">
+                                                                                                    <field name="NUM">5</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="looks_say" id="5862" inline="true" disabled="true">
+                                                                                                <value name="TEXT">
+                                                                                                  <block type="variables_get" id="5863">
+                                                                                                    <field name="VAR">最低平均</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="control_if_else" id="5864" inline="true">
+                                                                                                    <value name="COND">
+                                                                                                      <block type="operators_compare_eq" id="5865" inline="true">
+                                                                                                        <value name="A">
+                                                                                                          <block type="variables_get" id="5866">
+                                                                                                            <field name="VAR">タイム</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="B">
+                                                                                                          <block type="math_number" id="5867">
+                                                                                                            <field name="NUM">0</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <statement name="THEN">
+                                                                                                      <block type="control_if" id="5868" inline="true">
+                                                                                                        <value name="COND">
+                                                                                                          <block type="operators_compare_gte" id="5869" inline="true">
+                                                                                                            <value name="A">
+                                                                                                              <block type="operators_minus" id="5870" inline="true">
+                                                                                                                <value name="A">
+                                                                                                                  <block type="variables_get" id="5871">
+                                                                                                                    <field name="VAR">センサ</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="B">
+                                                                                                                  <block type="variables_get" id="5872">
+                                                                                                                    <field name="VAR">最低平均</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="B">
+                                                                                                              <block type="math_number" id="5873">
+                                                                                                                <field name="NUM">80</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <statement name="THEN">
+                                                                                                          <block type="variables_set" id="5874" inline="true">
+                                                                                                            <field name="VAR">最高平均</field>
+                                                                                                            <value name="VALUE">
+                                                                                                              <block type="variables_get" id="5875">
+                                                                                                                <field name="VAR">センサ</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="variables_set" id="5876" inline="true">
+                                                                                                                <field name="VAR">タイム</field>
+                                                                                                                <value name="VALUE">
+                                                                                                                  <block type="math_number" id="5877">
+                                                                                                                    <field name="NUM">1</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </statement>
+                                                                                                      </block>
+                                                                                                    </statement>
+                                                                                                    <statement name="ELSE">
+                                                                                                      <block type="control_if_else" id="5878" inline="true">
+                                                                                                        <value name="COND">
+                                                                                                          <block type="operators_compare_eq" id="5879" inline="true">
+                                                                                                            <value name="A">
+                                                                                                              <block type="variables_get" id="5880">
+                                                                                                                <field name="VAR">タイム</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="B">
+                                                                                                              <block type="math_number" id="5881">
+                                                                                                                <field name="NUM">1</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <statement name="THEN">
+                                                                                                          <block type="variables_set" id="5882" inline="true">
+                                                                                                            <field name="VAR">カウント</field>
+                                                                                                            <value name="VALUE">
+                                                                                                              <block type="operators_add" id="5883" inline="true">
+                                                                                                                <value name="A">
+                                                                                                                  <block type="variables_get" id="5884">
+                                                                                                                    <field name="VAR">カウント</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="B">
+                                                                                                                  <block type="math_number" id="5885">
+                                                                                                                    <field name="NUM">1</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="control_if" id="5886" inline="true">
+                                                                                                                <value name="COND">
+                                                                                                                  <block type="operators_compare_lt" id="5887" inline="true">
+                                                                                                                    <value name="A">
+                                                                                                                      <block type="operators_add" id="5888" inline="true">
+                                                                                                                        <value name="A">
+                                                                                                                          <block type="operators_minus" id="5889" inline="true">
+                                                                                                                            <value name="A">
+                                                                                                                              <block type="variables_get" id="5890">
+                                                                                                                                <field name="VAR">センサ</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                            <value name="B">
+                                                                                                                              <block type="variables_get" id="5891">
+                                                                                                                                <field name="VAR">最低平均</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="B">
+                                                                                                                          <block type="math_number" id="5892">
+                                                                                                                            <field name="NUM">10</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <value name="B">
+                                                                                                                      <block type="operators_minus" id="5893" inline="true">
+                                                                                                                        <value name="A">
+                                                                                                                          <block type="variables_get" id="5894">
+                                                                                                                            <field name="VAR">最高平均</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="B">
+                                                                                                                          <block type="hardware_sensor_value" id="5895">
+                                                                                                                            <field name="PIN">A0</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <statement name="THEN">
+                                                                                                                  <block type="variables_set" id="5896" inline="true">
+                                                                                                                    <field name="VAR">タイム</field>
+                                                                                                                    <value name="VALUE">
+                                                                                                                      <block type="math_number" id="5897">
+                                                                                                                        <field name="NUM">2</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </statement>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </statement>
+                                                                                                        <statement name="ELSE">
+                                                                                                          <block type="control_if" id="5898" inline="true">
+                                                                                                            <value name="COND">
+                                                                                                              <block type="operators_compare_lt" id="5899" inline="true">
+                                                                                                                <value name="A">
+                                                                                                                  <block type="operators_minus" id="5900" inline="true">
+                                                                                                                    <value name="A">
+                                                                                                                      <block type="variables_get" id="5901">
+                                                                                                                        <field name="VAR">最高平均</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <value name="B">
+                                                                                                                      <block type="variables_get" id="5902">
+                                                                                                                        <field name="VAR">センサ</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="B">
+                                                                                                                  <block type="operators_minus" id="5903" inline="true">
+                                                                                                                    <value name="A">
+                                                                                                                      <block type="variables_get" id="5904">
+                                                                                                                        <field name="VAR">センサ</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <value name="B">
+                                                                                                                      <block type="variables_get" id="5905">
+                                                                                                                        <field name="VAR">最低平均</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <statement name="THEN">
+                                                                                                              <block type="variables_set" id="5906" inline="true">
+                                                                                                                <field name="VAR">loop</field>
+                                                                                                                <value name="VALUE">
+                                                                                                                  <block type="text" id="5907">
+                                                                                                                    <field name="TEXT">false</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </statement>
+                                                                                                          </block>
+                                                                                                        </statement>
+                                                                                                        <next>
+                                                                                                          <block type="control_if" id="5908" inline="true">
+                                                                                                            <value name="COND">
+                                                                                                              <block type="operators_compare_eq" id="5909" inline="true">
+                                                                                                                <value name="A">
+                                                                                                                  <block type="variables_get" id="5910">
+                                                                                                                    <field name="VAR">カウント</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="B">
+                                                                                                                  <block type="math_number" id="5911">
+                                                                                                                    <field name="NUM">100</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <statement name="THEN">
+                                                                                                              <block type="variables_set" id="5912" inline="true">
+                                                                                                                <field name="VAR">loop</field>
+                                                                                                                <value name="VALUE">
+                                                                                                                  <block type="text" id="5913">
+                                                                                                                    <field name="TEXT">false</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </statement>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </statement>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </statement>
+                                                                            <next>
+                                                                              <block type="control_loop" id="5914">
+                                                                                <statement name="DO">
+                                                                                  <block type="variables_set" id="5915" inline="true">
+                                                                                    <field name="VAR">タイム</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="operators_add" id="5916" inline="true">
+                                                                                        <value name="A">
+                                                                                          <block type="variables_get" id="5917">
+                                                                                            <field name="VAR">タイム</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="B">
+                                                                                          <block type="math_number" id="5918">
+                                                                                            <field name="NUM">1</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </statement>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </statement>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="character_new" id="5919">
+                                                            <field name="NAME">図6</field>
+                                                            <statement name="DO">
+                                                              <block type="events_on_start" id="5920">
+                                                                <statement name="DO">
+                                                                  <block type="control_loop" id="5921">
+                                                                    <statement name="DO">
+                                                                      <block type="control_if" id="5922" inline="true">
+                                                                        <value name="COND">
+                                                                          <block type="sensing_input_key_push_or_down" id="5923">
+                                                                            <field name="KEY">K_J</field>
+                                                                            <field name="POD">push</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <statement name="THEN">
+                                                                          <block type="hardware_servo_set_position" id="5924" inline="true">
+                                                                            <field name="PIN">D6</field>
+                                                                            <value name="POS">
+                                                                              <block type="math_number" id="5925">
+                                                                                <field name="NUM">120</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="control_if" id="5926" inline="true">
+                                                                                <value name="COND">
+                                                                                  <block type="operators_compare_eq" id="5927" inline="true">
+                                                                                    <value name="A">
+                                                                                      <block type="variables_get" id="5928">
+                                                                                        <field name="VAR">ランチャー</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="B">
+                                                                                      <block type="math_number" id="5929">
+                                                                                        <field name="NUM">0</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="THEN">
+                                                                                  <block type="hardware_servo_set_position" id="5930" inline="true">
+                                                                                    <field name="PIN">D6</field>
+                                                                                    <value name="POS">
+                                                                                      <block type="math_number" id="5931">
+                                                                                        <field name="NUM">85</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="control_sleep" id="5932" inline="true">
+                                                                                        <value name="SEC">
+                                                                                          <block type="math_number" id="5933">
+                                                                                            <field name="NUM">1</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="variables_set" id="5934" inline="true">
+                                                                                            <field name="VAR">ランチャー</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="math_number" id="5935">
+                                                                                                <field name="NUM">1</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="hardware_servo_set_position" id="5936" inline="true">
+                                                                                                <field name="PIN">D6</field>
+                                                                                                <value name="POS">
+                                                                                                  <block type="math_number" id="5937">
+                                                                                                    <field name="NUM">120</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </statement>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </statement>
+                                                                      </block>
+                                                                    </statement>
+                                                                  </block>
+                                                                </statement>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="character_new" id="5938">
+                                                                <field name="NAME">図5</field>
+                                                                <statement name="DO">
+                                                                  <block type="events_on_start" id="5939">
+                                                                    <statement name="DO">
+                                                                      <block type="control_loop" id="5940">
+                                                                        <statement name="DO">
+                                                                          <block type="control_if" id="5941" inline="true">
+                                                                            <value name="COND">
+                                                                              <block type="sensing_input_key_push_or_down" id="5942">
+                                                                                <field name="KEY">K_SPACE</field>
+                                                                                <field name="POD">push</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <statement name="THEN">
+                                                                              <block type="variables_set" id="5943" inline="true">
+                                                                                <field name="VAR">loop</field>
+                                                                                <value name="VALUE">
+                                                                                  <block type="text" id="5944">
+                                                                                    <field name="TEXT">false</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </statement>
+                                                                          </block>
+                                                                        </statement>
+                                                                      </block>
+                                                                    </statement>
+                                                                  </block>
+                                                                </statement>
+                                                                <next>
+                                                                  <block type="character_new" id="5945">
+                                                                    <field name="NAME">図4</field>
+                                                                    <statement name="DO">
+                                                                      <block type="events_on_start" id="5946"></block>
+                                                                    </statement>
+                                                                    <next>
+                                                                      <block type="character_new" id="5947">
+                                                                        <field name="NAME">図3</field>
+                                                                        <statement name="DO">
+                                                                          <block type="events_on_start" id="5948"></block>
+                                                                        </statement>
+                                                                        <next>
+                                                                          <block type="character_new" id="5949">
+                                                                            <field name="NAME">図2</field>
+                                                                            <statement name="DO">
+                                                                              <block type="events_on_start" id="5950"></block>
+                                                                            </statement>
+                                                                            <next>
+                                                                              <block type="character_new" id="5951">
+                                                                                <field name="NAME">図1</field>
+                                                                                <statement name="DO">
+                                                                                  <block type="events_on_start" id="5952"></block>
+                                                                                </statement>
+                                                                                <next>
+                                                                                  <block type="character_new" id="5953">
+                                                                                    <field name="NAME">図8</field>
+                                                                                    <statement name="DO">
+                                                                                      <block type="events_on_start" id="5954"></block>
+                                                                                    </statement>
+                                                                                    <next>
+                                                                                      <block type="character_new" id="5955">
+                                                                                        <field name="NAME">道</field>
+                                                                                        <statement name="DO">
+                                                                                          <block type="events_on_start" id="5956"></block>
+                                                                                        </statement>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="character_new" id="5957" x="929" y="-2617">
+    <field name="NAME">bar1</field>
+    <statement name="DO">
+      <block type="events_on_start" id="5958">
+        <statement name="DO">
+          <block type="motion_rotate_left" id="5959" inline="true">
+            <value name="ANGLE">
+              <block type="math_number" id="5960">
+                <field name="NUM">90</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="5961" inline="true">
+                <field name="VAR">初動回数</field>
+                <value name="VALUE">
+                  <block type="math_number" id="5962">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="5963" inline="true">
+                    <field name="VAR">加速（最小）</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="5964">
+                        <field name="NUM">4</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="5965" inline="true">
+                        <field name="VAR">加速（最大）</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="5966">
+                            <field name="NUM">6</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="5967" inline="true">
+                            <field name="VAR">加速</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="5968">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="5969" inline="true">
+                                <field name="VAR">減速（最小）</field>
+                                <value name="VALUE">
+                                  <block type="math_number" id="5970">
+                                    <field name="NUM">-3</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="5971" inline="true">
+                                    <field name="VAR">減速（最大）</field>
+                                    <value name="VALUE">
+                                      <block type="math_number" id="5972">
+                                        <field name="NUM">-4</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="5973" inline="true">
+                                        <field name="VAR">減速</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="5974">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set" id="5975" inline="true">
+                                            <field name="VAR">回数</field>
+                                            <value name="VALUE">
+                                              <block type="variables_get" id="5976">
+                                                <field name="VAR">初動回数</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="5977" inline="true">
+                                                <field name="VAR">初期barY</field>
+                                                <value name="VALUE">
+                                                  <block type="operators_minus" id="5978" inline="true">
+                                                    <value name="A">
+                                                      <block type="sensing_character_property" id="5979">
+                                                        <field name="CHAR">図8</field>
+                                                        <field name="PROPERTY">y</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id="5980">
+                                                        <field name="NUM">10</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set" id="5981" inline="true">
+                                                    <field name="VAR">メモ</field>
+                                                    <value name="VALUE">
+                                                      <block type="math_number" id="5982">
+                                                        <field name="NUM">0</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="variables_set" id="5983" inline="true">
+                                                        <field name="VAR">上向き下向き？</field>
+                                                        <value name="VALUE">
+                                                          <block type="text" id="5984">
+                                                            <field name="TEXT">上</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="motion_set_y" id="5985" inline="true">
+                                                            <value name="Y">
+                                                              <block type="variables_get" id="5986">
+                                                                <field name="VAR">初期barY</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="control_loop" id="5987">
+                                                                <statement name="DO">
+                                                                  <block type="control_times" id="5988" inline="true">
+                                                                    <value name="COUNT">
+                                                                      <block type="variables_get" id="5989">
+                                                                        <field name="VAR">回数</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <statement name="DO">
+                                                                      <block type="motion_move" id="5990" inline="true">
+                                                                        <value name="STEP">
+                                                                          <block type="math_number" id="5991">
+                                                                            <field name="NUM">1</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="control_if" id="5992" inline="true">
+                                                                            <value name="COND">
+                                                                              <block type="operators_compare_eq" id="5993" inline="true">
+                                                                                <value name="A">
+                                                                                  <block type="variables_get" id="5994">
+                                                                                    <field name="VAR">loop</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="text" id="5995">
+                                                                                    <field name="TEXT">false</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <statement name="THEN">
+                                                                              <block type="control_break" id="5996"></block>
+                                                                            </statement>
+                                                                            <next>
+                                                                              <block type="control_if" id="5997" inline="true">
+                                                                                <value name="COND">
+                                                                                  <block type="operators_or" id="5998" inline="true">
+                                                                                    <value name="A">
+                                                                                      <block type="sensing_hit" id="5999">
+                                                                                        <field name="CHAR">道</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="B">
+                                                                                      <block type="sensing_hit" id="6000">
+                                                                                        <field name="CHAR">うまい棒</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="THEN">
+                                                                                  <block type="motion_turn" id="6001">
+                                                                                    <next>
+                                                                                      <block type="control_if_else" id="6002" inline="true">
+                                                                                        <value name="COND">
+                                                                                          <block type="sensing_hit" id="6003">
+                                                                                            <field name="CHAR">道</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="THEN">
+                                                                                          <block type="motion_set_y" id="6004" inline="true">
+                                                                                            <value name="Y">
+                                                                                              <block type="variables_get" id="6005">
+                                                                                                <field name="VAR">初期barY</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="variables_set" id="6006" inline="true">
+                                                                                                <field name="VAR">回数</field>
+                                                                                                <value name="VALUE">
+                                                                                                  <block type="variables_get" id="6007">
+                                                                                                    <field name="VAR">初動回数</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="variables_set" id="6008" inline="true">
+                                                                                                    <field name="VAR">上向き下向き？</field>
+                                                                                                    <value name="VALUE">
+                                                                                                      <block type="text" id="6009">
+                                                                                                        <field name="TEXT">上</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <statement name="ELSE">
+                                                                                          <block type="variables_set" id="6010" inline="true">
+                                                                                            <field name="VAR">上向き下向き？</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="text" id="6011">
+                                                                                                <field name="TEXT">下</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </statement>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </statement>
+                                                                    <next>
+                                                                      <block type="control_if_else" id="6012" inline="true">
+                                                                        <value name="COND">
+                                                                          <block type="sensing_hit" id="6013">
+                                                                            <field name="CHAR">図1</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <statement name="THEN">
+                                                                          <block type="variables_set" id="6014" inline="true">
+                                                                            <field name="VAR">メモ</field>
+                                                                            <value name="VALUE">
+                                                                              <block type="math_number" id="6015">
+                                                                                <field name="NUM">0</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </statement>
+                                                                        <statement name="ELSE">
+                                                                          <block type="control_if_else" id="6016" inline="true">
+                                                                            <value name="COND">
+                                                                              <block type="sensing_hit" id="6017">
+                                                                                <field name="CHAR">図2</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <statement name="THEN">
+                                                                              <block type="variables_set" id="6018" inline="true">
+                                                                                <field name="VAR">メモ</field>
+                                                                                <value name="VALUE">
+                                                                                  <block type="math_number" id="6019">
+                                                                                    <field name="NUM">1</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </statement>
+                                                                            <statement name="ELSE">
+                                                                              <block type="control_if_else" id="6020" inline="true">
+                                                                                <value name="COND">
+                                                                                  <block type="sensing_hit" id="6021">
+                                                                                    <field name="CHAR">図3</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="THEN">
+                                                                                  <block type="variables_set" id="6022" inline="true">
+                                                                                    <field name="VAR">メモ</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="math_number" id="6023">
+                                                                                        <field name="NUM">2</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <statement name="ELSE">
+                                                                                  <block type="control_if_else" id="6024" inline="true">
+                                                                                    <value name="COND">
+                                                                                      <block type="sensing_hit" id="6025">
+                                                                                        <field name="CHAR">図4</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <statement name="THEN">
+                                                                                      <block type="variables_set" id="6026" inline="true">
+                                                                                        <field name="VAR">メモ</field>
+                                                                                        <value name="VALUE">
+                                                                                          <block type="math_number" id="6027">
+                                                                                            <field name="NUM">3</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                    <statement name="ELSE">
+                                                                                      <block type="control_if_else" id="6028" inline="true">
+                                                                                        <value name="COND">
+                                                                                          <block type="sensing_hit" id="6029">
+                                                                                            <field name="CHAR">図5</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="THEN">
+                                                                                          <block type="variables_set" id="6030" inline="true">
+                                                                                            <field name="VAR">メモ</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="math_number" id="6031">
+                                                                                                <field name="NUM">4</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <statement name="ELSE">
+                                                                                          <block type="control_if_else" id="6032" inline="true">
+                                                                                            <value name="COND">
+                                                                                              <block type="sensing_hit" id="6033">
+                                                                                                <field name="CHAR">図4</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <statement name="THEN">
+                                                                                              <block type="variables_set" id="6034" inline="true">
+                                                                                                <field name="VAR">メモ</field>
+                                                                                                <value name="VALUE">
+                                                                                                  <block type="math_number" id="6035">
+                                                                                                    <field name="NUM">4</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                            <statement name="ELSE">
+                                                                                              <block type="variables_set" id="6036" inline="true">
+                                                                                                <field name="VAR">メモ</field>
+                                                                                                <value name="VALUE">
+                                                                                                  <block type="math_number" id="6037">
+                                                                                                    <field name="NUM">5</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                  </block>
+                                                                                </statement>
+                                                                              </block>
+                                                                            </statement>
+                                                                          </block>
+                                                                        </statement>
+                                                                        <next>
+                                                                          <block type="control_if" id="6038" inline="true">
+                                                                            <value name="COND">
+                                                                              <block type="operators_compare_eq" id="6039" inline="true">
+                                                                                <value name="A">
+                                                                                  <block type="variables_get" id="6040">
+                                                                                    <field name="VAR">loop</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="text" id="6041">
+                                                                                    <field name="TEXT">false</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <statement name="THEN">
+                                                                              <block type="control_break" id="6042"></block>
+                                                                            </statement>
+                                                                            <next>
+                                                                              <block type="control_if_else" id="6043" inline="true">
+                                                                                <value name="COND">
+                                                                                  <block type="operators_compare_gte" id="6044" inline="true">
+                                                                                    <value name="A">
+                                                                                      <block type="variables_get" id="6045">
+                                                                                        <field name="VAR">メモ</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="B">
+                                                                                      <block type="math_number" id="6046">
+                                                                                        <field name="NUM">3</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="THEN">
+                                                                                  <block type="variables_set" id="6047" inline="true">
+                                                                                    <field name="VAR">減速</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="operators_rand" id="6048" inline="true">
+                                                                                        <value name="A">
+                                                                                          <block type="variables_get" id="6049">
+                                                                                            <field name="VAR">減速（最大）</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="B">
+                                                                                          <block type="variables_get" id="6050">
+                                                                                            <field name="VAR">減速（最小）</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="control_if" id="6051" inline="true">
+                                                                                        <value name="COND">
+                                                                                          <block type="operators_compare_eq" id="6052" inline="true">
+                                                                                            <value name="A">
+                                                                                              <block type="variables_get" id="6053">
+                                                                                                <field name="VAR">上向き下向き？</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="B">
+                                                                                              <block type="text" id="6054">
+                                                                                                <field name="TEXT">下</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="THEN">
+                                                                                          <block type="variables_set" id="6055" inline="true">
+                                                                                            <field name="VAR">減速</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="operators_multiply" id="6056" inline="true">
+                                                                                                <value name="A">
+                                                                                                  <block type="variables_get" id="6057">
+                                                                                                    <field name="VAR">減速</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                  <block type="math_number" id="6058">
+                                                                                                    <field name="NUM">-1</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <next>
+                                                                                          <block type="variables_set" id="6059" inline="true">
+                                                                                            <field name="VAR">回数</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="operators_add" id="6060" inline="true">
+                                                                                                <value name="A">
+                                                                                                  <block type="variables_get" id="6061">
+                                                                                                    <field name="VAR">回数</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                  <block type="variables_get" id="6062">
+                                                                                                    <field name="VAR">減速</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <statement name="ELSE">
+                                                                                  <block type="variables_set" id="6063" inline="true">
+                                                                                    <field name="VAR">加速</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="operators_rand" id="6064" inline="true">
+                                                                                        <value name="A">
+                                                                                          <block type="variables_get" id="6065">
+                                                                                            <field name="VAR">加速（最小）</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="B">
+                                                                                          <block type="variables_get" id="6066">
+                                                                                            <field name="VAR">加速（最大）</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="control_if" id="6067" inline="true">
+                                                                                        <value name="COND">
+                                                                                          <block type="operators_compare_eq" id="6068" inline="true">
+                                                                                            <value name="A">
+                                                                                              <block type="variables_get" id="6069">
+                                                                                                <field name="VAR">上向き下向き？</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="B">
+                                                                                              <block type="text" id="6070">
+                                                                                                <field name="TEXT">下</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="THEN">
+                                                                                          <block type="variables_set" id="6071" inline="true">
+                                                                                            <field name="VAR">加速</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="operators_multiply" id="6072" inline="true">
+                                                                                                <value name="A">
+                                                                                                  <block type="variables_get" id="6073">
+                                                                                                    <field name="VAR">加速</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                  <block type="math_number" id="6074">
+                                                                                                    <field name="NUM">-1</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <next>
+                                                                                          <block type="variables_set" id="6075" inline="true">
+                                                                                            <field name="VAR">回数</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="operators_add" id="6076" inline="true">
+                                                                                                <value name="A">
+                                                                                                  <block type="variables_get" id="6077">
+                                                                                                    <field name="VAR">回数</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                  <block type="variables_get" id="6078">
+                                                                                                    <field name="VAR">加速</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <next>
+                                                                                  <block type="control_if" id="6079" inline="true">
+                                                                                    <value name="COND">
+                                                                                      <block type="operators_compare_lt" id="6080" inline="true">
+                                                                                        <value name="A">
+                                                                                          <block type="variables_get" id="6081">
+                                                                                            <field name="VAR">回数</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="B">
+                                                                                          <block type="math_number" id="6082">
+                                                                                            <field name="NUM">10</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <statement name="THEN">
+                                                                                      <block type="variables_set" id="6083" inline="true">
+                                                                                        <field name="VAR">回数</field>
+                                                                                        <value name="VALUE">
+                                                                                          <block type="math_number" id="6084">
+                                                                                            <field name="NUM">10</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </statement>
+                                                                <next>
+                                                                  <block type="variables_set" id="6085" inline="true">
+                                                                    <field name="VAR">得点</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="operators_multiply" id="6086" inline="true">
+                                                                        <value name="A">
+                                                                          <block type="operators_divide" id="6087" inline="true">
+                                                                            <value name="A">
+                                                                              <block type="operators_minus" id="6088" inline="true">
+                                                                                <value name="A">
+                                                                                  <block type="sensing_character_property" id="6089">
+                                                                                    <field name="CHAR">図8</field>
+                                                                                    <field name="PROPERTY">y</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="sensing_character_property" id="6090">
+                                                                                    <field name="CHAR">bar1</field>
+                                                                                    <field name="PROPERTY">y</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="operators_minus" id="6091" inline="true">
+                                                                                <value name="A">
+                                                                                  <block type="sensing_character_property" id="6092">
+                                                                                    <field name="CHAR">図8</field>
+                                                                                    <field name="PROPERTY">y</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                  <block type="sensing_character_property" id="6093">
+                                                                                    <field name="CHAR">図7</field>
+                                                                                    <field name="PROPERTY">y</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                          <block type="math_number" id="6094">
+                                                                            <field name="NUM">100</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="variables_set" id="6095" inline="true">
+                                                                        <field name="VAR">得点α</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="operators_round" id="6096" inline="true">
+                                                                            <value name="A">
+                                                                              <block type="variables_get" id="6097">
+                                                                                <field name="VAR">得点</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="control_loop" id="6098">
+                                                                            <statement name="DO">
+                                                                              <block type="looks_say" id="6099" inline="true">
+                                                                                <value name="TEXT">
+                                                                                  <block type="variables_get" id="6100">
+                                                                                    <field name="VAR">得点</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="control_sleep" id="6101" inline="true">
+                                                                                    <value name="SEC">
+                                                                                      <block type="math_number" id="6102">
+                                                                                        <field name="NUM">2</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="variables_set" id="6103" inline="true">
+                                                                                        <field name="VAR">画面切り替え</field>
+                                                                                        <value name="VALUE">
+                                                                                          <block type="text" id="6104">
+                                                                                            <field name="TEXT">ture</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </statement>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="character_new" id="6105" x="1444" y="-2582">
+    <field name="NAME">残念賞1</field>
+    <statement name="DO">
+      <block type="events_on_start" id="6106">
+        <statement name="DO">
+          <block type="looks_hide" id="6107">
+            <next>
+              <block type="control_loop" id="6108">
+                <statement name="DO">
+                  <block type="control_if" id="6109" inline="true">
+                    <value name="COND">
+                      <block type="operators_and" id="6110" inline="true">
+                        <value name="A">
+                          <block type="operators_compare_eq" id="6111" inline="true">
+                            <value name="A">
+                              <block type="variables_get" id="6112">
+                                <field name="VAR">画面切り替え</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="6113">
+                                <field name="TEXT">ture</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="operators_compare_lt" id="6114" inline="true">
+                            <value name="A">
+                              <block type="variables_get" id="6115">
+                                <field name="VAR">得点α</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="6116">
+                                <field name="VAR">うまい棒ゲットライン</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="THEN">
+                      <block type="looks_show" id="6117"></block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="character_new" id="6118">
+        <field name="NAME">うまい棒ゲット</field>
+        <statement name="DO">
+          <block type="events_on_start" id="6119">
+            <statement name="DO">
+              <block type="looks_hide" id="6120">
+                <next>
+                  <block type="variables_set" id="6121" inline="true">
+                    <field name="VAR">ランチャー</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="6122">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control_loop" id="6123">
+                        <statement name="DO">
+                          <block type="control_if" id="6124" inline="true">
+                            <value name="COND">
+                              <block type="operators_and" id="6125" inline="true">
+                                <value name="A">
+                                  <block type="operators_compare_eq" id="6126" inline="true">
+                                    <value name="A">
+                                      <block type="variables_get" id="6127">
+                                        <field name="VAR">画面切り替え</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="text" id="6128">
+                                        <field name="TEXT">ture</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="operators_compare_gte" id="6129" inline="true">
+                                    <value name="A">
+                                      <block type="variables_get" id="6130">
+                                        <field name="VAR">得点α</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="variables_get" id="6131">
+                                        <field name="VAR">うまい棒ゲットライン</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="THEN">
+                              <block type="looks_show" id="6132">
+                                <next>
+                                  <block type="hardware_servo_set_position" id="6133" inline="true">
+                                    <field name="PIN">D6</field>
+                                    <value name="POS">
+                                      <block type="math_number" id="6134">
+                                        <field name="NUM">120</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="control_if" id="6135" inline="true">
+                                        <value name="COND">
+                                          <block type="operators_compare_eq" id="6136" inline="true">
+                                            <value name="A">
+                                              <block type="variables_get" id="6137">
+                                                <field name="VAR">ランチャー</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="6138">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="THEN">
+                                          <block type="hardware_servo_set_position" id="6139" inline="true">
+                                            <field name="PIN">D6</field>
+                                            <value name="POS">
+                                              <block type="math_number" id="6140">
+                                                <field name="NUM">85</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="control_sleep" id="6141" inline="true">
+                                                <value name="SEC">
+                                                  <block type="math_number" id="6142">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set" id="6143" inline="true">
+                                                    <field name="VAR">ランチャー</field>
+                                                    <value name="VALUE">
+                                                      <block type="math_number" id="6144">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="character_new" id="6145">
+            <field name="NAME">王冠1</field>
+            <statement name="DO">
+              <block type="events_on_start" id="6146">
+                <statement name="DO">
+                  <block type="looks_hide" id="6147">
+                    <next>
+                      <block type="control_loop" id="6148">
+                        <statement name="DO">
+                          <block type="control_if" id="6149" inline="true">
+                            <value name="COND">
+                              <block type="operators_and" id="6150" inline="true">
+                                <value name="A">
+                                  <block type="operators_compare_eq" id="6151" inline="true">
+                                    <value name="A">
+                                      <block type="variables_get" id="6152">
+                                        <field name="VAR">画面切り替え</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="text" id="6153">
+                                        <field name="TEXT">ture</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="operators_compare_gte" id="6154" inline="true">
+                                    <value name="A">
+                                      <block type="variables_get" id="6155">
+                                        <field name="VAR">得点α</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="variables_get" id="6156">
+                                        <field name="VAR">うまい棒ゲットライン</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="THEN">
+                              <block type="looks_show" id="6157">
+                                <next>
+                                  <block type="control_loop" id="6158">
+                                    <statement name="DO">
+                                      <block type="looks_say" id="6159" inline="true">
+                                        <value name="TEXT">
+                                          <block type="variables_get" id="6160">
+                                            <field name="VAR">得点</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+            <next>
+              <block type="character_new" id="6161">
+                <field name="NAME">ゴリアテ1</field>
+                <statement name="DO">
+                  <block type="events_on_start" id="6162">
+                    <statement name="DO">
+                      <block type="control_loop" id="6163">
+                        <statement name="DO">
+                          <block type="events_on_key_push_or_down" id="6164">
+                            <field name="KEY">K_S</field>
+                            <field name="POD">push</field>
+                            <statement name="DO">
+                              <block type="control_sleep" id="6165" inline="true">
+                                <value name="SEC">
+                                  <block type="math_number" id="6166">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="looks_vanish" id="6167"></block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+                <next>
+                  <block type="character_new" id="6168">
+                    <field name="NAME">スタート1</field>
+                    <statement name="DO">
+                      <block type="events_on_start" id="6169">
+                        <statement name="DO">
+                          <block type="control_loop" id="6170">
+                            <statement name="DO">
+                              <block type="events_on_key_push_or_down" id="6171">
+                                <field name="KEY">K_S</field>
+                                <field name="POD">push</field>
+                                <statement name="DO">
+                                  <block type="control_times" id="6172" inline="true">
+                                    <value name="COUNT">
+                                      <block type="math_number" id="6173">
+                                        <field name="NUM">7</field>
+                                      </block>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="control_await" id="6174">
+                                        <next>
+                                          <block type="looks_show" id="6175">
+                                            <next>
+                                              <block type="control_await" id="6176">
+                                                <next>
+                                                  <block type="looks_hide" id="6177"></block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="looks_vanish" id="6178"></block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
