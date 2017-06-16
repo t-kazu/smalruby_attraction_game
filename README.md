@@ -2,8 +2,11 @@
 
 ## ゲーム内容
 画面上を上下に動いているバーをジャンプで止めるゲーム。
+
 以下の記事で一部紹介されました。
+
 http://news.livedoor.com/article/detail/11361075/
+
 https://www.inside-games.jp/article/2017/04/30/106907.html
 
 ## スモウルビーで開発
