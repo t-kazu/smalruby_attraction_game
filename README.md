@@ -1,0 +1,1 @@
+# smalruby_attraction_game
